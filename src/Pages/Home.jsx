@@ -19,11 +19,14 @@ import { FaPaperPlane } from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
 import { FcFaq } from "react-icons/fc";
 import { SlNotebook } from "react-icons/sl";
+import { IoCloseSharp } from "react-icons/io5";
 import Footer from '../Common/Footer';
 import { dropDownData } from '../Data/DropDownList';
-
+import { IoMdContact } from "react-icons/io";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import { FaLock } from "react-icons/fa";
 export default function Home() {
-    
+
     // let [innerItems, setinnerItems] = useState(false)
     // let [enquiryInnerItems, setenquiryInnerItems] = useState(false)
     // let [colorInnterItems, setcolorInnerItems] = useState(false)
@@ -43,19 +46,24 @@ export default function Home() {
 
     let [dropdownMenu, setdropdownMenu] = useState(-1)
 
+
+    let [dashBoradMenu, setdashBoradMenu] = useState(false)
+
     return (
         <section className='max-w-full' id='dashboard'>
-            <div className='w-full grid grid-cols-[18%_auto]'>
-                <div className='h-screen overflow-y-scroll bg-gray-50 '>
-                    <div className='border-b-1 border-gray-400 p-2 w-[95%] mx-auto'>
+            <div className='w-full grid lg:grid-cols-[18%_auto]'>
+                <div className={`h-screen overflow-y-scroll sm:fixed lg:static duration-1000 ${dashBoradMenu ? 'left-[0%]' : 'left-[-100%]'}  bg-gray-50`}>
+                    <div className='border-b-1 border-gray-400 p-2 w-[95%] mx-auto sm:flex sm:justify-end lg:justify-center'>
                         <figure>
                             <img src="/Images/wscube-tech-logo-2.svg" className='mx-auto mb-5 ' alt="" />
+
                         </figure>
+                        <IoCloseSharp className='text-3xl lg:hidden sm:block hidden' onClick={() => setdashBoradMenu(false)} />
                     </div>
                     <div id='pages' className='m-5'>
                         <nav>
                             <ul>
-                                <li className='flex items-center gap-2  hover:bg:rounded-2xl py-4 text-black font-medium text-lg'>
+                                <li className='flex items-center gap-2  hover:bg:rounded-2xl py-4 text-black font-medium lg:text-lg sm:text-sm'>
                                     <RiDashboard2Fill />
                                     <Link to={'/dashboard'}>Dashboard</Link>
                                 </li>
@@ -68,18 +76,18 @@ export default function Home() {
                                         console.log(value)
                                         return (
                                             <div className='maniItems'>
-                                                <li className='flex items-center gap-2 cursor-pointer  hover:bg:rounded-2xl py-2 text-black font-medium text-lg' >
+                                                <li className='flex items-center gap-2 cursor-pointer  hover:bg:rounded-2xl py-2 text-black font-medium lg:text-lg sm:text-sm' >
                                                     {icon}
                                                     <p className='w-full flex justify-between items-center' onClick={() => setdropdownMenu(dropdownMenu == id ? -1 : id)}>{title} {dropdownMenu == id ? <RiArrowDropUpLine className='text-[25px]' /> : <RiArrowDropDownLine className='text-[25px]' />}
                                                     </p>
 
                                                 </li>
                                                 <div className={`flex  items-center gap-2 innetItems my-2 ${dropdownMenu == id ? '' : 'hidden'} `}>
-                                                    <FaRegDotCircle /><Link to={link1} className='w-full flex justify-between items-center font-semibold  text-[14px] whitespace-nowrap'>{innerTitle}
+                                                    <FaRegDotCircle /><Link to={link1} onClick={() => setdashBoradMenu(false)} className='w-full flex justify-between items-center font-semibold  text-[14px] whitespace-nowrap'>{innerTitle}
                                                     </Link>
                                                 </div>
-                                                <div className={`flex  items-center gap-2 innetItems my-2 ${dropdownMenu == id && innerTitle2!=undefined ? '' : 'hidden'} `}>
-                                                    <FaRegDotCircle /><Link to={link2} className='w-full flex justify-between items-center font-semibold  text-[14px] whitespace-nowrap'>{innerTitle2}
+                                                <div className={`flex  items-center gap-2 innetItems my-2 ${dropdownMenu == id && innerTitle2 != undefined ? '' : 'hidden'} `}>
+                                                    <FaRegDotCircle /><Link to={link2} onClick={() => setdashBoradMenu(false)} className='w-full flex justify-between items-center font-semibold  text-[14px] whitespace-nowrap'>{innerTitle2}
                                                     </Link>
                                                 </div>
                                             </div>
@@ -286,11 +294,30 @@ export default function Home() {
                 </div>
                 <div id='dashBoardContent' className='h-screen overflow-y-scroll'>
                     <div className='w-[95%] mx-auto flex items-center justify-between my-2' id='heading'>
-                        <p className='flex items-center gap-4 text-xl text-gray-500 font-medium'><AiOutlineMenu className='font-bold text-2xl' /> Dashboard</p>
-                        <figure>
-                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className='w-12 h-12 rounded-full object-cover' alt="" />
-                        </figure>
+                        <p className='flex items-center gap-4 text-xl text-gray-500 font-medium'>
+                            <AiOutlineMenu className='font-bold text-2xl' onClick={() => setdashBoradMenu(true)} />
+                            Dashboard</p>
+                        <div className='cursor-pointer relative group'>
+                            <figure>
+                                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className='w-12 h-12 rounded-full object-cover' alt="" />
+                            </figure>
 
+                            <div className='w-48 text-gray-900 bg-white border border-gray-200 rounded-lg shadow-2xl absolute right-0 hidden group-hover:block ' id='profile'>
+                                <nav>
+                                    <ul>
+                                        <li className='p-2 border-b border-gray-200 hover:text-blue-600 hover:bg-gray-100'>
+                                            <Link to={'/profile'} className='flex items-center font-semibold gap-2'><IoMdContact className='text-lg' />Profile</Link>
+                                        </li>
+                                        <li className='p-2 border-b hover:text-blue-600 hover:bg-gray-100' >
+                                            <Link className='flex items-center font-semibold gap-2'><HiOutlineOfficeBuilding className='text-lg' />Company Profile</Link>
+                                        </li>
+                                        <li className='p-2 border-b-1 border-gray-200 hover:text-blue-600 hover:bg-gray-100'>
+                                            <Link className='flex items-center font-semibold gap-2'><FaLock className='text-lg' />Logout</Link>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                     <hr className="bg-[#ccc] h-px border-0 my-2" />
                     <div className='w-[95%] mx-auto text-md font-medium my-3 text-gray-700'>

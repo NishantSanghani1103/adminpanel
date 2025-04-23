@@ -122,7 +122,8 @@ export let dropDownData = [
         innerIcon: < FaRegDotCircle/>,
         innerTitle: "Add Slider",
         innerTitle2: "View Slider",
-        link1:'/contact-enquiry',
+        link1:'/Slider/add',
+        link2:'/Slider/view',
     },
     {
         id: 12,
@@ -131,7 +132,8 @@ export let dropDownData = [
         innerIcon: < FaRegDotCircle/>,
         innerTitle: "Add Coutry",
         innerTitle2: "View Coutry",
-        link1:'/contact-enquiry',
+        link1:'/Country/add',
+        link2:'/Country/view'
     },
     {
         id: 13,
@@ -140,8 +142,8 @@ export let dropDownData = [
         innerIcon: < FaRegDotCircle/>,
         innerTitle: "Add Testimonials",
         innerTitle2: "View Testimonials",
-        link1:'/contact-enquiry',
-        link2:'/newslatter'
+        link1:'/Testimonials/add',
+        link2:'/Testimonials/view'
     },
     {
         id: 14,
@@ -150,8 +152,8 @@ export let dropDownData = [
         innerIcon: < FaRegDotCircle/>,
         innerTitle: "Add Faq",
         innerTitle2: "View Faq",
-        link1:'/contact-enquiry',
-        link2:'/newslatter'
+        link1:'/Faq/add',
+        link2:'/Faq/view'
     },
     {
         id: 15,

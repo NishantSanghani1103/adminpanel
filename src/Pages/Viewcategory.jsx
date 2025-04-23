@@ -21,16 +21,16 @@ export default function Viewcategory() {
                     <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                         <thead className='text-xs h-[40px] text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
                             <tr className=''>
-                                <th className='w-[3%]'>
+                                <th className='lg:w-[3%] sm:w-[8%]'>
                                     <div className='flex items-center'>
                                         <input type="checkbox" className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ' />
                                     </div>
                                 </th>
 
-                                <th scope='col' className='w-[45%]'>Material Name</th>
+                                <th scope='col' className='lg:w-[45%] sm:w-[30%]'>Material Name</th>
                                 <th scope='col' className='w-[15%]'>image</th>
-                                <th scope='col' className='w-[15%]'>order</th>
-                                <th scope='col' className='w-[15%]'>status</th>
+                                <th scope='col' className='w-[15%] '>order</th>
+                                <th scope='col' className='lg:w-[15%]'>status</th>
                                 <th scope='col' className='w-[10%]'>action</th>
 
                             </tr>

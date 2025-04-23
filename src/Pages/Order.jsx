@@ -7,11 +7,116 @@ export default function Order() {
     return (
         <>
 
-            <section className={`w-[1320px] mx-auto bg-white shadow-2xl rounded-xl h-[300px] fixed top-2 left-10 ${viewOrder ? '' : 'hidden'}`}>
-                <div className='' >
-                    <div className='w-full flex items-center justify-between p-5 border-b-1 border-gray-400' id='orderHeading'>
-                        <h3 className='text-xl font-semibold'>Product Image's & Price</h3>
-                        <span className='text-5xl cursor-pointer text-gray-500  hover:text-black rounded-[50%] flex items-center justify-center' onClick={() => setviewOrder(false)}>&times;</span>
+            <section className={`w-[1320px] mx-auto bg-white shadow-2xl rounded-xl  fixed left-20 top-2  ${viewOrder ? '' : 'hidden'}`}>
+                <div className='w-full flex items-center justify-between p-5 border-b-1 border-gray-400' id='orderHeading'>
+                    <h3 className='text-xl font-semibold'>Product Image's & Price</h3>
+                    <span className='text-5xl cursor-pointer text-gray-500  hover:text-black rounded-[50%] flex items-center justify-center' onClick={() => setviewOrder(false)}>&times;</span>
+                </div>
+                <div className='w-full my-2 grid grid-cols-[70%_auto] ' >
+                    <div className='w-full m-5' id='items'>
+                        <div className='flex gap-5 mb-2 '>
+                            <div id='itemsImage'>
+                                <figure>
+                                    <img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/19796322/2022/9/15/e17ac111-a42a-48be-b5ef-c627ae91db811663233930653-Roadster-Mens--Printed-Navy-Blue-Round-Neck-Short-Sleeves-T--1.jpg" className='w-28' alt="" />
+                                </figure>
+                            </div>
+                            <div id='itemsContent'>
+                                <div id='itemsContentHeading'>
+                                    <h3 className='text-red-600 font-semibold'>Men Navy Blue & Off White Typography Printed Pure Cotton T-shirt</h3>
+                                </div>
+                                <div className='my-3'>
+                                    <ul>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Price : &nbsp;
+                                                <span className='font-normal'>₹ 1500</span>
+                                            </p>
+                                        </li>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Quantity :   &nbsp;
+                                                <span className='font-normal'>1</span>
+                                            </p>
+                                        </li>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Size :   &nbsp;
+                                                <span className='font-normal'>Xl</span>
+                                            </p>
+                                        </li>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Color :   &nbsp;
+                                                <span className='font-normal'>Red</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex gap-5 mb-2 '>
+                            <div id='itemsImage'>
+                                <figure>
+                                    <img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/23644364/2023/10/6/2e563247-3f1e-4822-adf9-fa233c62e8fd1696582792046-Mast--Harbour-Men-Sweaters-8961696582791747-2.jpg" className='w-28' alt="" />
+                                </figure>
+                            </div>
+                            <div id='itemsContent'>
+                                <div id='itemsContentHeading'>
+                                    <h3 className='text-red-600 font-semibold'>Men Navy Blue & Off White Typography Printed Pure Cotton T-shirt</h3>
+                                </div>
+                                <div className='my-3'>
+                                    <ul>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Price : &nbsp;
+                                                <span className='font-normal'>₹ 1500</span>
+                                            </p>
+                                        </li>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Quantity :   &nbsp;
+                                                <span className='font-normal'>1</span>
+                                            </p>
+                                        </li>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Size :   &nbsp;
+                                                <span className='font-normal'>Xl</span>
+                                            </p>
+                                        </li>
+                                        <li className='pb-1'>
+                                            <p className='text-[17px] font-semibold'>Color :   &nbsp;
+                                                <span className='font-normal'>Red</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='shadow-lg border-2 m-5 border-gray-200 rounded-md bg-white mr-3' id='productDetails' >
+                        <div className='p-3' id='productDetails'>
+                            <h3 className='text-[20px] font-semibold'>Product Details</h3>
+                            <p className='py-1'>Roshan Chaurasia, First Floor , Laxmi  Tower, Bhaskar Circle, Ratanada, PRAYAGRAJ, UTTAR PRADESH 211003 India</p>
+                        <div className='my-5' id='orderSummary'>
+                            <h3 className='font-semibold text-[20px] py-1'>Order Summary</h3>
+                            <ul>
+                                <li className='py-1'>
+                                    <p className='font-semibold'>Item(s) Subtotal :&nbsp;
+                                        <span className='font-normal text-[16px]'>  ₹ 3500</span>
+                                    </p>
+                                </li>
+                                <li  className='py-1'>
+                                    <p className='font-semibold'>Cash / Pay on Delivery :  &nbsp;
+                                        <span className='font-normal text-[16px]'>  ₹0</span>
+                                    </p>
+                                </li >
+                                <li className='py-1'>
+                                    <p className='font-semibold'>Shipping : &nbsp;
+                                        <span className='font-normal text-[16px]'>  ₹0</span>
+                                    </p>
+                                </li>
+                                <li className='py-1'>
+                                    <p className='font-semibold'>Grand Total: &nbsp;
+                                        <span className='font-normal text-[16px]'>  ₹ 3500</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </section>

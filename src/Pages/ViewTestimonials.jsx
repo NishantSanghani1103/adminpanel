@@ -1,13 +1,13 @@
 import React from 'react'
 import { FaFilter } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
-export default function Viewmaterials() {
+export default function ViewTestimonials() {
     return (
         <>
-            <section className='mt-5 max-w-full rounded-md  ' style={{ border: "1px solid #ccc" }} id='viewCategory'>
+            <section className='mt-5 max-w-full rounded-md  ' style={{ border: "1px solid #ccc" }} id='viewTestimonials'>
                 <div className=' bg-slate-100 flex p-4 justify-between items-center form-heading'>
                     <div className=''>
-                        <h3 className='text-[26px] font-semibold'>View Material</h3>
+                        <h3 className='text-[26px] font-semibold'>View Testimonial</h3>
                     </div>
                     <div className='flex items-center gap-2 mr-3'>
                         <div className='text-white font-bold w-[40px] h-[40px] rounded-sm flex justify-center items-center bg-blue-700'>
@@ -27,9 +27,12 @@ export default function Viewmaterials() {
                                     </div>
                                 </th>
 
-                                <th scope='col' className='w-[60%]'>Material Name</th>
-                                <th scope='col' className='w-[15%]'>order</th>
-                                <th scope='col' className='w-[15%]'>status</th>
+                                <th scope='col' className='lg:w-[40%] sm:w-[20%]'>Title</th>
+                                <th scope='col' className='w-[12%]'>image</th>
+                                <th scope='col' className='lg:w-[15%] sm:w-[20%]'>Description</th>
+                                <th scope='col' className='lg:w-[8%] sm:w-[10%]'>Rating</th>
+                                <th scope='col' className='lg:w-[8%] sm:w-[10%]'>order</th>
+                                <th scope='col' className='lg:w-[12%] sm:w-[15%]'>status</th>
                                 <th scope='col' className='w-[10%]'>action</th>
 
                             </tr>
@@ -40,9 +43,26 @@ export default function Viewmaterials() {
                                     <input type="checkbox" className='w-4 h-4' name="" id="" />
                                 </td>
                                 <td className='text-base font-semibold text-black '>Neil Sims</td>
-
+                                <td><img src="https://packshifts.in/images/iso.png" width={40} height={40} alt="" /></td>
+                                <td>	CEO Of SunPark</td>
+                                <td className='text-start'>5</td>
                                 <td className='text-start'>1</td>
                                 <td className=''><button className=' bg-gradient-to-r from-green-400 via-green-500 to-green-600 py-1.5 text-white font-semibold px-5 rounded-sm'>Active</button></td>
+                                <td><button className=' flex justify-center items-center text-white bg-blue-500 w-[40px] h-[40px] rounded-[50%]'>
+                                    <MdEdit className='text-[18px]' />
+                                </button></td>
+                            </tr>
+
+                            <tr className='bg-white  border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'>
+                                <td className='w-[3%] py-7'>
+                                    <input type="checkbox" className='w-4 h-4' name="" id="" />
+                                </td>
+                                <td className='text-base font-semibold text-black '>Neil Sims</td>
+                                <td><img src="https://packshifts.in/images/iso.png" width={40} height={40} alt="" /></td>
+                                <td>	CEO Of SunPark</td>
+                                <td className='text-start'>5</td>
+                                <td className='text-start'>1</td>
+                                <td className=''><button className=' bg-gradient-to-r from-red-400 via-red-500 to-red-600 py-1.5 text-white font-semibold px-5 rounded-sm'>Deactive</button></td>
                                 <td><button className=' flex justify-center items-center text-white bg-blue-500 w-[40px] h-[40px] rounded-[50%]'>
                                     <MdEdit className='text-[18px]' />
                                 </button></td>

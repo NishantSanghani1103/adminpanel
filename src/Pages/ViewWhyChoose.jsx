@@ -20,17 +20,17 @@ export default function ViewWhyChoose() {
                 <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                     <thead className='text-xs h-[40px] text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
                         <tr className=''>
-                            <th className='w-[3%]'>
+                            <th className='lg:w-[3%] sm:w-[7%]'>
                                 <div className='flex items-center'>
                                     <input type="checkbox" className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ' />
                                 </div>
                             </th>
 
-                            <th scope='col' className='w-[45%]'>Title</th>
-                            <th scope='col' className='w-[12%]'>image</th>
-                            <th scope='col' className='w-[15%]'>Description</th>
-                            <th scope='col' className='w-[10%]'>order</th>
-                            <th scope='col' className='w-[12%]'>status</th>
+                            <th scope='col' className='lg:w-[45%] sm:w-[30%]'>Title</th>
+                            <th scope='col' className='lg:w-[12%] sm:w-[15%]'>image</th>
+                            <th scope='col' className='lg:w-[15%] sm:w-[20%]'>Description</th>
+                            <th scope='col' className='lg:w-[10%] sm:w-[12%]'>order</th>
+                            <th scope='col' className='lg:w-[12%] sm:w-[17%]'>status</th>
                             <th scope='col' className='w-[10%]'>action</th>
 
                         </tr>

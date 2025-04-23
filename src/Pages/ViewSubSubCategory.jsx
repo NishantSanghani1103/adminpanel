@@ -21,18 +21,18 @@ export default function ViewSubSubCategory() {
                     <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                         <thead className='text-xs h-[40px] text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
                             <tr className=''>
-                                <th className='w-[3%]'>
+                                <th className='lg:w-[3%] sm:w-[8%]'>
                                     <div className='flex items-center'>
                                         <input type="checkbox" className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ' />
                                     </div>
                                 </th>
 
-                                <th scope='col' className='w-[25%]'>Parent Category Name</th>
-                                <th scope='col' className='w-[20%]'>Sub Category Name</th>
+                                <th scope='col' className='lg:w-[25%] sm:w-[18%]'>Parent Category Name</th>
+                                <th scope='col' className='lg:w-[20%] sm:w-[17%]'>Sub Category Name</th>
                                 <th scope='col' className='w-[20%]'>Category Name</th>
                                 <th scope='col' className='w-[10%]'>image</th>
-                                <th scope='col' className='w-[8%]' >order</th>
-                                <th scope='col' className='w-[11%]' >status</th>
+                                <th scope='col' className='lg:w-[8%] sm:w-[10%]' >order</th>
+                                <th scope='col' className='lg:w-[11%] sm:w-[13%]' >status</th>
                                 <th scope='col' className='w-[15%]'>action</th>
 
                             </tr>

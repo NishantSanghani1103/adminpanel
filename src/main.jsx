@@ -27,6 +27,15 @@ import ViewProduct from './Pages/ViewProduct.jsx';
 import AddWhyChhose from './Pages/AddWhyChhose.jsx';
 import ViewWhyChoose from './Pages/ViewWhyChoose.jsx';
 import Order from './Pages/Order.jsx';
+import AddSlider from './Pages/AddSlider.jsx';
+import ViewSlider from './Pages/ViewSlider.jsx';
+import AddCounntry from './Pages/AddCounntry.jsx';
+import ViewCountry from './Pages/ViewCountry.jsx';
+import AddTestimonials from './Pages/AddTestimonials.jsx';
+import ViewTestimonials from './Pages/ViewTestimonials.jsx';
+import AddFaq from './Pages/AddFaq.jsx';
+import ViewFaq from './Pages/ViewFaq.jsx';
+import Profile from './Pages/Profile.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -51,6 +60,15 @@ createRoot(document.getElementById('root')).render(
         <Route path='/add-whychoose' element={<AddWhyChhose />} />
         <Route path='/view-whychoose' element={<ViewWhyChoose />} />
         <Route path='/orders' element={<Order />} />
+        <Route path='/Slider/add' element={<AddSlider />} />
+        <Route path='/Slider/view' element={<ViewSlider />} />
+        <Route path='/Country/add' element={<AddCounntry />} />
+        <Route path='/Country/view' element={<ViewCountry />} />
+        <Route path='/Testimonials/add' element={<AddTestimonials />} />
+        <Route path='/Testimonials/view' element={<ViewTestimonials />} />
+        <Route path='/Faq/add' element={<AddFaq />} />
+        <Route path='/Faq/view' element={<ViewFaq />} />
+        <Route path='/profile' element={<Profile />} />
       </Route>
     </Routes>
   </BrowserRouter>
