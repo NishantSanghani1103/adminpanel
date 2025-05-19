@@ -52,7 +52,7 @@ export default function Home() {
     return (
         <section className='max-w-full' id='dashboard'>
             <div className='w-full grid lg:grid-cols-[18%_auto]'>
-                <div className={`h-screen overflow-y-scroll sm:fixed lg:static duration-1000 ${dashBoradMenu ? 'left-[0%]' : 'left-[-100%]'}  bg-gray-50`}>
+                <div className={`h-screen lg:z-0 sm:z-999 overflow-y-scroll sm:fixed lg:static duration-1000 ${dashBoradMenu ? 'left-[0%]' : 'left-[-100%]'}  bg-gray-50`}>
                     <div className='border-b-1 border-gray-400 p-2 w-[95%] mx-auto sm:flex sm:justify-end lg:justify-center'>
                         <figure>
                             <img src="/Images/wscube-tech-logo-2.svg" className='mx-auto mb-5 ' alt="" />
@@ -82,7 +82,7 @@ export default function Home() {
                                                     </p>
 
                                                 </li>
-                                                <div className={`flex  items-center gap-2 innetItems my-2 ${dropdownMenu == id ? '' : 'hidden'} `}>
+                                                <div className={`flex  items-center gap-2 innetItems my-2 ${dropdownMenu == id && innerTitle != undefined ? '' : 'hidden'} `}>
                                                     <FaRegDotCircle /><Link to={link1} onClick={() => setdashBoradMenu(false)} className='w-full flex justify-between items-center font-semibold  text-[14px] whitespace-nowrap'>{innerTitle}
                                                     </Link>
                                                 </div>
@@ -309,7 +309,7 @@ export default function Home() {
                                             <Link to={'/profile'} className='flex items-center font-semibold gap-2'><IoMdContact className='text-lg' />Profile</Link>
                                         </li>
                                         <li className='p-2 border-b hover:text-blue-600 hover:bg-gray-100' >
-                                            <Link className='flex items-center font-semibold gap-2'><HiOutlineOfficeBuilding className='text-lg' />Company Profile</Link>
+                                            <Link to={'/company-profile'} className='flex items-center font-semibold gap-2'><HiOutlineOfficeBuilding className='text-lg' />Company Profile</Link>
                                         </li>
                                         <li className='p-2 border-b-1 border-gray-200 hover:text-blue-600 hover:bg-gray-100'>
                                             <Link className='flex items-center font-semibold gap-2'><FaLock className='text-lg' />Logout</Link>

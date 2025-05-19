@@ -1,1 +1,4 @@
 @import "tailwindcss";
+.dropify-wrapper .dropify-message span {
+  font-size: 24px !important; /* Change this to your desired size */
+}

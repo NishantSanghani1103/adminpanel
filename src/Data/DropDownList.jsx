@@ -158,12 +158,9 @@ export let dropDownData = [
     {
         id: 15,
         title: "Terms & Conditions",
-        icon: <SlNotebook className=' text-[20px] text-gray-600 text-2xl' />,
-        innerIcon: < FaRegDotCircle/>,
-        innerTitle: "Contact Enquirys",
-        innerTitle2: "Newsletters",
-        link1:'/contact-enquiry',
-        link2:'/newslatter'
+        icon: <SlNotebook className=' text-[20px] text-gray-600 text-2xl' />
+      
+    
     },
 
 ]

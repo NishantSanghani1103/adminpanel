@@ -1,4 +1,5 @@
 import React from 'react'
+import Dropify from '../Common/Dropify'
 
 export default function AddProduct() {
     return (
@@ -11,19 +12,19 @@ export default function AddProduct() {
                     <form action="" className='p-2'>
                         <div className='grid grid-cols-3 gap-5'>
                             <div>
-                                <div className='h-80' style={{ border: "1px solid red" }}>
-                                    <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                    <input type="file" className='' />
+                                <div className='h-80'>
+                                    <label htmlFor="" className='text-[16px] font-semibold'>Product Image</label>
+                                    <Dropify/>
 
                                 </div>
-                                <div className='h-80' style={{ border: "1px solid red" }}>
-                                    <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                    <input type="file" className='' />
+                                <div className='h-80'>
+                                    <label htmlFor="" className='text-[16px] font-semibold'>Back Image</label>
+                                    <Dropify/>
 
                                 </div>
-                                <div className='h-80' style={{ border: "1px solid red" }}>
-                                    <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                    <input type="file" className='' />
+                                <div className='h-80'>
+                                    <label htmlFor="" className='text-[16px] font-semibold'>Gallery Image</label>
+                                    <Dropify/>
 
                                 </div>
 

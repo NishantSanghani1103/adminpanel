@@ -1,4 +1,5 @@
 import React from 'react'
+import Dropify from '../Common/Dropify'
 
 export default function AddWhyChhose() {
     return (
@@ -10,9 +11,9 @@ export default function AddWhyChhose() {
                 <div>
                     <form action="" className='p-2'>
                         <div className='grid grid-cols-[35%_auto] gap-5'>
-                            <div className='' style={{ border: "1px solid red" }}>
+                            <div className='' >
                                 <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                <input type="file" />
+                                <Dropify/>
                             </div>
                             <div>
                                 <label htmlFor="" className='text-[16px] font-semibold'>Title</label>

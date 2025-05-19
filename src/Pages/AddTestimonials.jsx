@@ -1,4 +1,5 @@
 import React from 'react'
+import Dropify from '../Common/Dropify'
 
 export default function AddTestimonials() {
   return (
@@ -10,13 +11,13 @@ export default function AddTestimonials() {
         <div>
           <form action="" className='p-2'>
             <div className='grid grid-cols-[35%_auto] gap-5'>
-              <div className='' style={{ border: "1px solid red" }}>
+              <div className='' >
                 <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                <input type="file" />
+                <Dropify />
               </div>
               <div>
 
-              <label htmlFor="" className='text-[16px] font-semibold'>Name</label>
+                <label htmlFor="" className='text-[16px] font-semibold'>Name</label>
                 <input type="text" placeholder='Name' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
 
                 <label htmlFor="" className='text-[16px] font-semibold'>Designation</label>

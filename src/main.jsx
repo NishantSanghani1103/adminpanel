@@ -36,6 +36,7 @@ import ViewTestimonials from './Pages/ViewTestimonials.jsx';
 import AddFaq from './Pages/AddFaq.jsx';
 import ViewFaq from './Pages/ViewFaq.jsx';
 import Profile from './Pages/Profile.jsx';
+import CompnayProfile from './Pages/CompnayProfile.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -69,6 +70,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/Faq/add' element={<AddFaq />} />
         <Route path='/Faq/view' element={<ViewFaq />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/company-profile' element={<CompnayProfile />} />
       </Route>
     </Routes>
   </BrowserRouter>
