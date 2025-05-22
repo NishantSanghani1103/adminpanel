@@ -20,6 +20,7 @@ export default function Dropify() {
                 type="file"
                 className="dropify"
                 data-height="250"
+                
             />
         </div>
     )

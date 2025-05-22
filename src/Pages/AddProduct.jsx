@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Dropify from '../Common/Dropify'
-
+import Quill from 'quill';
+import 'quill/dist/quill.snow.css';
 export default function AddProduct() {
+    const editorRef = useRef(null);
+    useEffect(() => {
+        new Quill(editorRef.current, {
+            theme: 'snow',
+        });
+    }, []);
     return (
         <>
             <section className='mt-5 max-w-full rounded-md  ' id='addProduct'>
@@ -12,19 +19,19 @@ export default function AddProduct() {
                     <form action="" className='p-2'>
                         <div className='grid grid-cols-3 gap-5'>
                             <div>
-                                <div className='h-80'>
+                                <div className=''>
                                     <label htmlFor="" className='text-[16px] font-semibold'>Product Image</label>
-                                    <Dropify/>
+                                    <Dropify />
 
                                 </div>
-                                <div className='h-80'>
+                                <div>
                                     <label htmlFor="" className='text-[16px] font-semibold'>Back Image</label>
-                                    <Dropify/>
+                                    <Dropify />
 
                                 </div>
-                                <div className='h-80'>
+                                <div className=''>
                                     <label htmlFor="" className='text-[16px] font-semibold'>Gallery Image</label>
-                                    <Dropify/>
+                                    <Dropify />
 
                                 </div>
 
@@ -134,8 +141,11 @@ export default function AddProduct() {
                             </div>
                         </div>
 
-
-                        <button className='text-white bg-purple-700 border-0 my-5 rounded-sm p-2'>Add Category</button>
+                        <div className='my-5'>
+                            <label htmlFor="" className='text-[16px] font-semibold'>Description</label>
+                            <div className="custom-quill-editor" ref={editorRef} />
+                        </div>
+                        <button className=' mt-5 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 cursor-pointer'> Create Product </button>
                     </form>
 
                 </div>

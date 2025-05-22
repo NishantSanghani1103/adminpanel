@@ -2,3 +2,6 @@
 .dropify-wrapper .dropify-message span {
   font-size: 24px !important; /* Change this to your desired size */
 }
+.custom-quill-editor .ql-editor {
+  min-height: 400px; /* or fixed height like height: 400px */
+}
